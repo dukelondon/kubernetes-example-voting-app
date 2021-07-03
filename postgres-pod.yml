@@ -1,0 +1,16 @@
+apiVersion: v1 #String
+kind: Pod #String
+metadata: #Dictionary
+    name: postgres-pod
+    labels: #Dictionary within the metadata dictionary
+       app: demo-voting-app
+       name: postgres-pod
+
+spec:
+       containers: #List/Array
+        - name: postgres
+          image: postgres:9.4
+          ports:
+          - containerPort: 5432 #default port that postgres listens on
+
+

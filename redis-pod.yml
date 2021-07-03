@@ -1,0 +1,16 @@
+apiVersion: v1 #String
+kind: Pod #String
+metadata: #Dictionary
+    name: redis-pod
+    labels: #Dictionary within the metadata dictionary
+       app: demo-voting-app
+       name: redis-pod
+
+spec:
+       containers: #List/Array
+        - name: redis
+          image: redis
+          ports:
+          - containerPort: 6379 #default port that Redis exposes
+
+

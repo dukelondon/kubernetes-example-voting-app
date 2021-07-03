@@ -1,0 +1,15 @@
+apiVersion: v1 #String
+kind: Pod #String
+metadata: #Dictionary
+    name: worker-app-pod
+    labels: #Dictionary within the metadata dictionary
+       app: demo-voting-app
+       name: worker-app-pod
+
+spec:
+       containers: #List/Array
+        - name: worker-app
+          image: dockersamples/examplevotingapp_worker
+
+
+
